@@ -1,37 +1,45 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http); 
-let x=[],p=[1],temp;
-
-app.get('/Tambola', function(req, res) {
-   res.sendfile("NumGenerator"); 
-  // res.sendfile("Login");
+let x,a=[],d=[1],l=0;
+app.get('/', function(req, res) {
+   res.sendfile('NumGenerator');
 });
 
-io.on('connection', function(socket) {   
-  socket.on('clientEvent',function(data){    
-    // console.log(data.number); 
-    socket.join("room-"+data.code);
-     temp=data.number;  
-     if(x[data.code]==undefined){
-        x[data.code]="";
-     }
-     x[data.code]=data.number;
-     console.log(x[data.code]); 
-     console.log(data.code); 
-     if(!data.number){
-     io.sockets.in("room-"+data.code).emit('connectToRoom', {description:x[data.code]});}
+io.on('connection', function(socket) {
    
-     //  io.sockets.emit("connectToRoom",{description:temp})
- 
-  
-}) 
+    setTimeout(function() {  
+        while(d.length!=0){ 
+                               
+          x=Math.floor(Math.random()*(90)+1);
 
-  
 
-  
- });
-   
-   http.listen(4000, function() {
-    console.log('listening on localhost:4000');
+          d=a.filter(function(number) { 
+              return number==x;
+         });         
+         if(d.length !=0){
+         x=Math.floor(Math.random()*(90)+1);  
+            }
+         else {  
+              a[l]=x;     
+              l++;  
+              socket.broadcast.emit('newdata',{description:x}); 
+              //this.setState({number1:x});   
+         }  
+        }
+
+        if(l<90){
+          d=[1];
+        }     
+        else{
+          d=[0];
+        }
+
+      },10000)
+
+         
+      //socket.broadcast.emit('newclientconnect',{description : x});
+   }); 
+   http.listen(3000, function() {
+    console.log('listening on localhost:3000');
  });
