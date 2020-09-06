@@ -1,0 +1,169 @@
+body{
+    background-color: whitesmoke;
+}
+.upperpart{ 
+    position: center;
+ background-color : red;  
+ border-color: red;  
+ border-style: solid; 
+ height: 60px;
+} 
+.create{
+    margin-top: 20px; 
+    margin-left:20px;
+}  
+.create:hover{
+    background-color:green;
+}
+.login:hover{
+    color:black;
+}
+.logo{    
+    position: center;  
+    text-align: center; 
+    margin-top: 10px;
+    margin-left: 60px;  
+    background-color: white; 
+    height: 40px;
+    width: 40px;
+    text-align: center;     
+    color:red;  
+    font-size:30px;
+    border-radius:100%; 
+   position:absolute;
+} 
+.heading{
+    color:#192f60; 
+    margin-left: 80px; 
+    margin-top:20px;
+    font-size:25px;
+    font-style:bold;
+    font-family:Roboto, Helvetica, sans-serif;
+
+} 
+.filter{  
+    box-shadow: 0 3px 6px; 
+    background-color: white; 
+    height: 600px;
+    width: 220px; 
+    margin-left: 113px; 
+    margin-top: 30px; 
+    margin-right: 993px; 
+    color:#192f60;
+}  
+.cuisine{
+    color: #8c96ab;
+    font-size: 15px;
+} 
+input.checkmark{
+    height: 10px;
+    width: 10px; 
+    margin-left: 20px;
+}  
+
+.tileContainer{ 
+    box-shadow: 0 3px 6px; 
+    margin-right:30px;
+    margin-bottom:30px; 
+    margin-top:-610px;
+    margin-left:500px; 
+    height: 260px;
+    width:794px; 
+}    
+
+.shopname{
+    margin-top:-130px;
+    margin-left:210px;
+} 
+img{ 
+    height: 140px; 
+    width:160px;
+    border-radius: 20px;  
+    margin-top: 20px; 
+    
+} 
+hr{
+    margin-top: 80px;
+}
+.tilecomponent{  
+    border-color: rgb(56, 141, 137); 
+    margin-top: 20px; 
+    margin-left: 20px;  
+    height: 160px;
+    width:160px;
+    border-radius: 50%;
+} 
+.tileContainer1{ 
+    box-shadow: 0 3px 6px; 
+    margin-right:30px;
+    margin-bottom:30px; 
+    margin-top:50px;
+    margin-left:500px; 
+    height: 260px;
+    width:794px; 
+}    
+.b2{
+    border:none; 
+    margin-left:800px;
+} 
+.pre:hover,.next:hover{
+    background-color: cyan;
+} 
+.filter1
+{
+    margin-left:20px;
+}
+.filter2
+{
+    margin-left: 20px;
+    color:#192f60;
+    font-size: 10px; 
+    margin-top: 10px
+}
+#location
+{
+    margin-left: 20px;
+    margin-top: 5px;
+    color: #192f60;
+    text-size-adjust: 10px ;
+}
+.cuisine{
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom:10px;
+    font-size:10px
+}
+.size
+{
+    size:10px;
+}
+.cost
+{
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom:10px;
+    font-size:10px
+}
+.sort
+{
+    margin-left: 20px;margin-top: 40px;margin-bottom:20px;font-size:10px
+}
+.shop{
+    color:#192f60;font-weight:bolder;font-size:25px;
+}
+.place
+{
+    color:#192f60;font-weight:bold;font-size:15px; margin-top:10px;
+}
+.address
+{
+    color:#192f60;font-weight:normal;font-size:15px;margin-top: 5px;
+}
+.about1
+{
+    
+    color :#192f60;margin-top:25px;
+}
+.login{
+    text-decoration: none; margin-left:78%;top: 20px;
+}

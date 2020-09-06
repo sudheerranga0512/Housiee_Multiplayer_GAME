@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <title>React App</title> 
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <script src="/socket.io/socket.io.js"></script>
+
+ <style> 
+   div.scroll { 
+                margin:4px, 4px; 
+                padding:4px; 
+                background-color:RGB(127, 205, 205); 
+                box-shadow: 0 3px 6px;
+                width: 500px; 
+                height: 500px;  
+                color:black; 
+                font-weight:bold;
+                overflow-x: hidden; 
+                overflow-y: auto; 
+                text-align:justify; 
+            }   
+ .HostGame,.JoinGame{
+  background-Color:"Emerald";
+ }     
+ #Exit{
+   width:100px;
+   height:30px; 
+   margin-left:1700px; 
+   margin-top: -120px;;
+ }
+ #Chat{
+ margin-top:-630px;  
+ margin-right: 300px;
+
+ } 
+ #chatButton{   
+   color:black;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+   font-weight: bolder;
+   width:70px;
+   height:60px;
+ } 
+ #inputChat{   
+   width:430px;
+   height:60px; 
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+   font-weight: bolder;
+
+ }
+ #page2Title{
+   font-size:30px;
+   color:white;
+   font-weight: bolder;
+ } 
+ #Gen{
+   width:150px;
+   height:30px;  
+   margin-left:47%;  
+   background-Color:white; 
+   Color:black; 
+   font-weight: bold; 
+   margin-top: 30px;
+
+ }    
+ #invitecode{
+   width:300px;
+   height:50px;  
+   margin-top: 20px;
+   margin-left:30%; 
+   box-shadow: 0 3px 6px; 
+   border-color:whitesmoke ; 
+   border-width: 2px;
+ } 
+ #countTickets{
+  width:300px;
+   height:50px; 
+   margin-left:30%; 
+   box-shadow: 0 3px 6px; 
+   border-color:whitesmoke ; 
+   border-width: 2px; 
+   margin-top: 20px;
+ } 
+ #game{ 
+  width:150px;
+   height:30px;  
+   margin-left:47%;  
+   background-Color:white; 
+   Color:black; 
+   font-weight: bold; 
+   margin-top: 30px;
+
+ }  
+ #end{ 
+   position: relative;
+   font-weight: bold; 
+   font-size:30px ;  
+   top:300px;
+   margin-left:1300px;
+
+ }
+ #th3{
+   font-size:50px; 
+   color:black;
+   font-weight: bold;
+ } 
+ #td3{
+   font-size:20px;
+   color:white;
+   font-weight:bold;
+ }
+ #head1{
+   font-size: 30px; 
+   text-align: center; 
+   font-weight: bolder; 
+   color: blanchedalmond;    
+   height:50px;
+   width:30%; 
+   margin-left: 35%; 
+   margin-top: 20px;
+   
+   border-color: blanchedalmond;
+   border:solid;
+   border-width: 2px;
+ }
+ #friends{
+  height: 100%;
+  background-color: RGB(221, 65, 36); 
+  margin-left: 600px; 
+  margin-right: 600px ;  
+  padding-bottom:100px; 
+  box-shadow: 0 3px 6px;
+ }
+ #img1{
+   background-image : url("images/page2.jpg");
+   background-repeat: no-repeat; 
+   background-size: cover; 
+    padding-left:10%;
+    padding-right: 30%;
+        
+        float: left;
+ }
+ .img1
+{
+    background: url("images/sign1img (1).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+        height: 100%;
+        width: 100%; 
+      padding-bottom:10%;
+    float: left;
+} 
+#head
+{ 
+    color:skyblue; 
+font-size: 30px;
+}
+
+.details
+{
+background-color: seashell; 
+box-shadow: 0 3px 6px;
+margin-top: 50px;
+font-size: 10px;
+font-weight: bold;
+color:black; 
+margin-left: 40px;
+float:left; 
+border: 2px solid black; 
+padding: 20px;  
+border-radius: 10%;
+}
+
+#cancel,#submit
+{
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 50px;
+  width:90px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+ .image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+    width:60%;
+    float: left;
+}
+.image-container
+{
+    background:url("903457b2-b695-4b53-8274-1c06283e58f4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:105%;
+    width:40%;
+    float: right;
+    margin-top: 20px;
+    border-radius: 10%;
+}
+.log
+{
+    font-size: 45px;
+    font-weight: bold;
+ text-align: center;
+ color: black;
+ margin-top: 60px;
+}
+.details1
+{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    font-size: 25px;
+    color: black;
+}
+#uname{
+      width: 300px;
+      height: 40px;
+      border-style: solid;
+      margin-top: 20px; 
+      margin-bottom:30px;
+      font-weight: normal;
+      font-size: 20px;
+    
+}
+#psw,#cpsw,#ph{
+    width: 300px;
+      height: 40px;
+      border-style: solid;
+      margin-top: 30px;
+      font-weight: normal;
+      font-size: 20px;
+      margin-bottom: 30px;
+    
+}
+.button
+{
+    
+    width:60px;
+    font-size: 30px;
+}
+   table, th, td {
+  border: 1px solid red;
+  border-collapse: collapse; 
+  padding:5px;
+  font-weight: bold ; 
+}  
+#number1{   
+  margin-top: -5%;
+  margin-left:1100px;
+}     
+#number2{
+  margin-top: -10%; 
+  margin-left:900px;
+} 
+#number3{
+  margin-top: -15%; 
+  margin-left:900px;
+} 
+#number4{
+  margin-top: -25%; 
+  margin-left:900px;
+} 
+#number5{
+  margin-top: -35%; 
+  margin-left:900px;
+} 
+#number6{
+  margin-top: -45%; 
+  margin-left:900px;
+}
+table{
+  margin-left: 50px;
+}
+#btn{
+  width:30%; 
+  margin-left:30%;
+  position:center;
+}
+li{
+  display :inline-block; 
+  text-decoration:none; 
+  font-size:20px;
+}
+td{ 
+  background-color: black;
+} 
+button{
+  padding:5px; 
+  width:100%; 
+  height:100%;
+}  
+.heading{ 
+  text-align: center;
+  font-size: 70px; 
+  margin-top:-30px; 
+  color:red;
+  font-weight: bold;
+}   
+
+#number{ 
+  margin-top:150px;
+}
+ </style>
+  </head> 
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    </body>
+</html>
